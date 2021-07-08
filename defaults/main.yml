@@ -1,1 +1,5 @@
 opendkim_port: 8891 
+opendkim_postfix: True
+opendkim_TrustedHosts:
+    - 127.0.0.1
+    - localhost

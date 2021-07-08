@@ -15,7 +15,7 @@
   file: path=/etc/opendkim/keys state=directory
 
 - name: opendkim TrustedHosts present
-  copy: src=TrustedHosts dest=/etc/opendkim/TrustedHosts
+  template: src=TrustedHosts.j2 dest=/etc/opendkim/TrustedHosts
   notify:
    - restart opendkim
 
@@ -46,4 +46,4 @@
   - restart opendkim
 
 - name: opendkim is running
-  service: name=opendkim state=running enabled=yes
+  service: name=opendkim state=started enabled=yes

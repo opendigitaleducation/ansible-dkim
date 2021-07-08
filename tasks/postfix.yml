@@ -26,5 +26,5 @@
     dest: /etc/postfix/main.cf
 
 - name: postfix is running
-  service: name=postfix state=running enabled=yes
+  service: name=postfix state=started enabled=yes
   tags: postfix
